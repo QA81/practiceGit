@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moj prvi sajt</title>
+    <!-- Nacin na importujemo eksterni css file gde definisemo link tag sa atributima, 
+    najbitnije je da imamo href atribut cija vrednost jeste putanja ka nasem css 
+    file-u gde pisemo stilove -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  
+  <body>
+    <!-- Naslove mozemo definisati do sestog reda -->
+    <!-- CLASS jeste atribut a TITLE je vrednost atributa, videti u css-u kako smo selektovali ovaj html element -->
+    <h1 class="title">
+      Naslov prvog reda
+    </h1>
+
+    <!-- ID jeste atribut a ID-TITLE je vrednost atributa, videti u css-u kako smo selektovali ovaj html element -->
+    <h1 id="id-title">
+      Naslov prvog reda
+    </h1>
+
+    <h2>
+      Naslov drugog reda
+    </h2>
+
+    <h6>
+      Naslov sestog reda
+    </h6>
+
+    <!-- Paragraf i inline html elementi kojima definisemo odredjene stilove -->
+    <p>Ovo je paragraf<mark>koji</mark>  ima neke html <strong>stilove</strong> kao i <em>ovaj</em> </p>
+
+    <!-- Liste -->
+    <ul>
+      Unordered list
+      <li>Prvi item</li>
+      <li>Drugi item</li>
+    </ul>
+
+    <ol>
+      Ordered list
+      <li>Prvi item</li>
+      <li>Drugi item</li>
+      <li>Treci item</li>
+      <li>Cetvrti item</li>
+    </ol>
+
+    <!-- Tabela a border atribut za sad koritimo da prikazemo bordere na tabeli -->
+    <table border="1">
+      <!-- Zaglavlje tabele definisemo na sledeci nacin -->
+      <thead>
+        <!-- tr koristimo kada zelimo da definisemo red u tabeli (table row) -->
+        <tr>
+          <!-- th cemo koristiti kad zelimo da naglasimo neke podatke u celiji tabele -->
+          <th>test</th>
+          <th>test 1</th>
+        </tr>
+      </thead>
+      <!-- Telo tabele definisemo na sledeci nacin -->
+      <!-- Na ovom primeru smo u css prikazali kako koristimo pseudo selector za nth-child,
+      pretaziti ovaj slektor u css file-u i videti nakoji nacin smo to uradili -->
+      <tbody class="table-body">
+        <tr>
+          <!-- td cemo koristiti kad zelimo da koristimo obican tekst u celiji tabele -->
+          <td>test 2</td>
+          <td>test 3</td>
+        </tr>
+
+        <tr>
+          <!-- td cemo koristiti kad zelimo da koristimo obican tekst u celiji tabele -->
+          <td>test 222</td>
+          <td>test 3222</td>
+        </tr>
+        
+        <tr>
+          <!-- td cemo koristiti kad zelimo da koristimo obican tekst u celiji tabele -->
+          <td>test 4</td>
+          <td>test 5</td>
+        </tr>
+
+        <tr>
+          <!-- td cemo koristiti kad zelimo da koristimo obican tekst u celiji tabele -->
+          <td>test 6</td>
+          <td>test 7</td>
+        </tr>
+      </tbody>
+      <!-- Footer tabele definisemo na sledeci nacin -->
+      <tfoot>
+        <tr>
+          <td>test 8</td>
+          <td>test 9</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- <br> Samo dodaje razmak i sledeci element stavlja u novi red -->
+    <br>
+
+    <!-- Forme -->
+    <form>
+      <!-- Svaki input bi po pravilu trebao da ima svoju labelu -->
+      <!-- Obratiti paznju na TYPE atribute sledecih inputa -->
+      <label>Ime:</label>
+      <input type="text" placeholder="Unesi ime" />
+
+      <!-- <br> Samo dodaje razmak i sledeci element stavlja u novi red -->
+      <br>
+      <br>
+
+      <label>Email:</label>
+      <input type="email" placeholder="Unesi email" />
+
+      <!-- <br> Samo dodaje razmak i sledeci element stavlja u novi red -->
+      <br>
+      <br>
+
+      <label for="test">Password:</label>
+      <input id="test" type="password" placeholder="Unesi password" />
+
+      <!-- <br> Samo dodaje razmak i sledeci element stavlja u novi red -->
+      <br>
+      <br>
+
+      <label>Unesite datum:</label>
+      <input type="date" />
+
+      <!-- Radio buttoni neophodno je da imaju istu vrednost name atributa kako bi bilo moguce izabrati samo jedan od njih -->
+      <p>Da li volite web programiranje?</p>
+      <label>Da</label>
+      <input type="radio" name="pitanje" checked />
+
+      <label>Ne</label>
+      <input type="radio" name="pitanje" />
+
+      <label>Mozda</label>
+      <input type="radio" name="pitanje" />
+
+      <br>
+      <br>
+
+      <!-- Checkbox inputi koje koristimo kad zelimo korisniku da damo mogucnost da izabere vise opcija -->
+      <label>test1</label>
+      <input type="checkbox" />
+
+      <label>test2</label>
+      <input type="checkbox" />
+
+      <!-- Labelu i input povezujemo sa for i id atributma (vrednosti treba da im budu iste),
+      klikom na labelu selektovacemo dati checkbox sto nije moguce ako neammo ove atribute -->
+      <label for="test3">test3</label>
+      <input id="test3" type="checkbox" checked />
+
+      <br>
+      <br>
+
+      <!-- Select field (dropdown sa opcijama), a multiple atribut omogucava dodavanje vise opcija
+      (komanda za MAC OS je SHIFT + KLIK NA VISE ELEMENATA) -->
+      <select multiple>
+        <option>Prva opcija</option>
+        <option>Druga opcija</option>
+        <option>Treca opcija</option>
+        <option>Cetvrta opcija</option>
+      </select>
+
+      <select>
+        <option>Prva opcija</option>
+        <option>Druga opcija</option>
+        <option>Treca opcija</option>
+        <option>Cetvrta opcija</option>
+      </select>
+
+      <br>
+      <br>
+
+      <!-- Textarea, polje za unos duzeg teksta -->
+      <label for="textarea">Unesite tekst:</label>
+      <textarea id="textarea" rows="5"></textarea>
+
+      <br>
+      <br>
+      
+      <!-- Element koji predtavlja drugme -->
+      <button>Send</button>
+    </form>
+
+    <br>
+    <br>
+
+    <!-- Prikaz slike, mora da ima src atribut cija vrednost jeste putanja do slike u nasem projektu
+    alt tag je prikazan kad ne uspemo da priakzemo sliku -->
+    <img src="slika.jpeg" alt="Ovo je slika" width="100" height="100" />
+
+
+    <!-- Link, href je adresa linka na koju cemo biti redirektovani nakon klika (u ovom slucaju google),
+    link moze da bude i relativan tj moze da vodi na stranicu koja se nalazi u okviru naseg projekta -->
+    <a href="https://www.google.com/" target="_blank" title="Ovo je link">Link</a>
+
+    <!-- Primer diva koji ima pozadinsku sliku, videti u css-u kako smo je dodelili -->
+    <div class="background-image-example">
+    </div>
+
+    <!-- Primer za seletovanje sibling elementa
+    (pogledati u css file-u kako smo selektovali ol element) -->
+    <h1 id="sibling-element-selector">
+      Naslov prvog reda
+    </h1>
+
+    <ol>
+      Ordered list
+      <li>Prvi item</li>
+      <li>Drugi item</li>
+      <li>Treci item</li>
+      <li>Cetvrti item</li>
+    </ol>
+
+    <!-- Primer za seletovanje direct child elementa
+    (pogledati u css file-u kako smo selektovali p
+    element koji je direktan child ovog elementa) -->
+    <div class="direct-child-element-selector">
+      <p>Element koji sluzi kao container</p>
+      <p>child Div-a</p>
+      <p>child Div-a</p>
+      <div>
+        <!-- Ovaj P element nije direktan child te nece dobiti definisane stilove -->
+        <p>nije direktan child Div-a</p>
+      </div>
+    </div>
+
+    <!-- Nad ovim buttonom je prikazan pseudo selektor :hover, :active, videti css file -->
+    <button class="pseudo-class-button">
+      Link sa pseudo klasama
+    </button>
+
+    <!-- Nad ovim elementom je dodat :before i :after element, videti css na koji nacin -->
+    <p class="before-after-pseudo-elements">After and before pseudo elements</p>
+
+    <!-- Razlika izmedju blok i inline-blok elemenata, promeniti display property nad
+    ovom klasom u css i videti razliku u ponasanju datih p elemenata, videti css file -->
+    <p class="display-inline">Paragraf 1</p>
+    <p class="display-inline">Paragraf 2</p>
+    <p class="display-inline">Paragraf 3</p>
+
+    <!-- Primer box modela, sam element se sastoji od kontenta, bordera, paddinga i margine
+    koji uticu na velicinu samog elementa, videti css file sa ovim pravilom -->
+    <div class="box-model">
+      Primer box modela
+    </div>
+  </body>
+
+</html>

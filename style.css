@@ -1,0 +1,143 @@
+/* Svaki selektor se satoji od naziva selektora,
+u ovom slucaju html u okviru kojeg pisemo 
+osobine datog elementa koji zelimo da stilizujemo */
+html {
+  /* sa leve strane pisemo osobinu(property)
+  a sa desne strane vrednost te osobine */
+  font-size: 20px;
+}
+
+/* Na ovaj nacin mozemo da selektujemo vise
+html elemnata i stilovi ce se primeniti na svaki od njih */
+/* Mozemo koristiti bilo koji tip selektora */
+h1, form, a {
+  color: rgb(145, 255, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Stilovi za modifikaciju linka */
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+/* Stilovi za modifikaciju liste */
+ul {
+  list-style-type: square;
+}
+
+ol {
+  list-style-type: upper-roman;
+}
+
+/* Stilizacija pozadinske slike */
+.background-image-example {
+  /* Ovde definisemo visinu elementa */
+  height: 400px;
+  /* Ovde definisemo url do slike koju zelimo da odelimo nasem elementu */
+  background-image: url(slika.jpeg);
+  /* Ovde definisemo velicinu same slike */
+  background-size: 100px;
+  /* Ovde definisemo nacin na koji prikazujemo sliku (da li ce se ponavljati) */
+  background-repeat: no-repeat;
+  /* Skracena verzija osobina za background-position je background-position: left center */
+  background-position-x: left;
+  background-position-y: center;
+  border: 1px solid red;
+  width: 70vw;
+}
+
+/* Ovo je CLASS selektor, na ovaj nacin selektujemo element u html-u koji ima class="title" */
+.title {
+  color: green;
+}
+
+/* Ovo je ATRIBUT selektor, na ovaj nacin selektujemo element u html-u koji ima class="title" */
+[class="title"] {
+  color: blue;
+}
+
+/* Ovo je ID selektor, na ovaj nacin selektujemo element u html-u koji ima id="id-title" */
+#id-title {
+  background-color: purple;
+}
+
+/* Ovo je sibling selektor kojim selektujemo prvi sibling element
+(element koji je odmah iza elementa sa leve strane - u ovom 
+slucaju selektovacemo ol samo ukoliko se nalazi iza elementa sa id="sibling-element-selector") */
+#sibling-element-selector + ol {
+  background-color: purple;
+}
+
+/* Primer za seletovanje direct child elementa, selektovacemo svaki p
+element koji je direkti child elementa sa klasom .direct-child-element-selecton */
+.direct-child-element-selector > p {
+  background-color: red;
+}
+
+/* Inicajalno stanje button-a koje cemo menjati u zavisnosti od dole definisanih pseudo selektora */
+.pseudo-class-button {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: blue;
+  /* Skraceni zapis ovoga gore */
+  /* border: 1px solid red; */
+}
+
+/* Promena ce biti vidljiva nakon sto predjemo misem preko datog elementa */
+.pseudo-class-button:hover {
+  color: red;
+  border-color: red;
+}
+
+/* Promena ce biti vidljiva u trenutku klika na dati html element */
+.pseudo-class-button:active {
+  color:black;
+  background-color: yellow;
+}
+
+/* Prikaz before i after elementa, bitno je napomenuti da svaki ovaj 
+pseudo element mora imati content atribut kao u primerima */
+.before-after-pseudo-elements:before {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: black;
+}
+
+.before-after-pseudo-elements:after {
+  content: "";
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-color: red;
+}
+
+/* nth-child je pseudo selektor koji prima odredjene parametre:
+ even = selektovace sve child elemente koji su parni
+ odd = selektovace sve child elemente koji su neparni
+ broj = selektovace child element koji "taj broj" po redu
+ Pogledati koje jos varijacije ovog selektora imamo na linku 
+ https://www.w3schools.com/css/css_pseudo_classes.asp
+ */
+.table-body tr:nth-child(even) {
+  background-color: black;
+  color: white;
+}
+
+/* Promeniti display property i videti razlike u prikazu p elemenata sa ovom klasom */
+.display-inline {
+  display: inline;
+}
+
+/* Osobine box modela  */
+.box-model {
+    padding: 30px;
+    border: 20px solid red;
+    background-color: red;
+    margin: 40px;
+}
